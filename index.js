@@ -4,6 +4,10 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 require("./config/dbConfig.js");
 const fileUpload = require("express-fileupload");
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
 app.use(bodyParser.json({limit:'5000kb'}))
 
 // Enable files upload
